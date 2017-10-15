@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FirsOtomasyonConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FirsOtomasyonConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.First_Otomaston.Properties.Settings.GlobalReference.Default.FirsOtomasyonConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TumStoklarimTableAdapter" GeneratorDataComponentClassName="TumStoklarimTableAdapter" Name="TumStoklarim" UserDataComponentName="TumStoklarimTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FirsOtomasyonConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Stoklar.StokKodu, Stoklar.StokAdi, StokGir.Adet, StokKategori.KategoriAdi, Stoklar.StokBarkod
+FROM            StokGir INNER JOIN
+                         Stoklar ON StokGir.Stok_id = Stoklar.Stokid INNER JOIN
+                         StokKategori ON Stoklar.Kategori_id = StokKategori.Kategorid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StokKodu" DataSetColumn="StokKodu" />
+              <Mapping SourceColumn="StokAdi" DataSetColumn="StokAdi" />
+              <Mapping SourceColumn="Adet" DataSetColumn="Adet" />
+              <Mapping SourceColumn="KategoriAdi" DataSetColumn="KategoriAdi" />
+              <Mapping SourceColumn="StokBarkod" DataSetColumn="StokBarkod" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TumStoklarim" msprop:Generator_TableClassName="TumStoklarimDataTable" msprop:Generator_TableVarName="tableTumStoklarim" msprop:Generator_TablePropName="TumStoklarim" msprop:Generator_RowDeletingName="TumStoklarimRowDeleting" msprop:Generator_RowChangingName="TumStoklarimRowChanging" msprop:Generator_RowEvHandlerName="TumStoklarimRowChangeEventHandler" msprop:Generator_RowDeletedName="TumStoklarimRowDeleted" msprop:Generator_UserTableName="TumStoklarim" msprop:Generator_RowChangedName="TumStoklarimRowChanged" msprop:Generator_RowEvArgName="TumStoklarimRowChangeEvent" msprop:Generator_RowClassName="TumStoklarimRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StokKodu" msprop:Generator_ColumnVarNameInTable="columnStokKodu" msprop:Generator_ColumnPropNameInRow="StokKodu" msprop:Generator_ColumnPropNameInTable="StokKoduColumn" msprop:Generator_UserColumnName="StokKodu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StokAdi" msprop:Generator_ColumnVarNameInTable="columnStokAdi" msprop:Generator_ColumnPropNameInRow="StokAdi" msprop:Generator_ColumnPropNameInTable="StokAdiColumn" msprop:Generator_UserColumnName="StokAdi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Adet" msprop:Generator_ColumnVarNameInTable="columnAdet" msprop:Generator_ColumnPropNameInRow="Adet" msprop:Generator_ColumnPropNameInTable="AdetColumn" msprop:Generator_UserColumnName="Adet" type="xs:int" minOccurs="0" />
+              <xs:element name="KategoriAdi" msprop:Generator_ColumnVarNameInTable="columnKategoriAdi" msprop:Generator_ColumnPropNameInRow="KategoriAdi" msprop:Generator_ColumnPropNameInTable="KategoriAdiColumn" msprop:Generator_UserColumnName="KategoriAdi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StokBarkod" msprop:Generator_ColumnVarNameInTable="columnStokBarkod" msprop:Generator_ColumnPropNameInRow="StokBarkod" msprop:Generator_ColumnPropNameInTable="StokBarkodColumn" msprop:Generator_UserColumnName="StokBarkod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

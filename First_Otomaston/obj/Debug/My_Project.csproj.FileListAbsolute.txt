@@ -1,0 +1,86 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\First_Otomaston.exe.config
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\First_Otomaston.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\First_Otomaston.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\My_Project.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.CariEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.DepartmanEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.AnaMenuler.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.DepartmanPersonel.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.LoginPanel.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.PersonelBilgileri.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.PersonelEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.SipariseEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.StokEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.StokKatEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\My_Project.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.Siparislerim.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.SiparisDurumu.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.SAlisFaturasiEkle.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.TumAlisFaturalarim.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.TumStoklarim.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\First_Otomaston.exe.config
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.exe
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.pdb
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\First_Otomaston.exe
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\First_Otomaston.pdb
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\My_Project.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.CariEkle.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.DepartmanEkle.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.AnaMenuler.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.DepartmanPersonel.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.LoginPanel.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.PersonelBilgileri.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.PersonelEkle.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.SiparisDurumu.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.Properties.Resources.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.SipariseEkle.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.Siparislerim.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.StokEkle.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.StokKatEkle.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.TumAlisFaturalarim.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.TumStoklarim.resources
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\My_Project.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Yeni klasör (5)\Yeni klasör\First_Otomaston\First_Otomaston\obj\Debug\First_Otomaston.AlisFaturasiEkle.resources

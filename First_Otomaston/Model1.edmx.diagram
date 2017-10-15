@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b0d4322b6e824abb8480a57daf416a4b" Name="Diagram1">
+        <EntityTypeShape EntityType="FirsOtomasyonModel.Departman" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.Personel" Width="1.5" PointX="2.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.sysdiagram" Width="1.5" PointX="4.375" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Personel_Departman" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.StokKategori" Width="1.5" PointX="4.25" PointY="3" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.Stoklar" Width="1.5" PointX="7.375" PointY="3" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Stoklar_StokKategori" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.Cariler" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.Siparisler" Width="1.5" PointX="4.375" PointY="4.875" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Siparisler_Cariler" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Siparisler_Personel" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Siparisler_Stoklar" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.SiparisDurum" Width="1.5" PointX="6.375" PointY="6.875" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Siparisler_SiparisDurum" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.AlisFaturalari" Width="1.5" PointX="12.75" PointY="5" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_AlisFaturalari_Cariler" />
+        <EntityTypeShape EntityType="FirsOtomasyonModel.AktifPasifDurum" Width="1.5" PointX="0.75" PointY="4.75" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Cariler_AktifPasifDurum" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Personel_AktifPasifDurum" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_Stoklar_AktifPasifDurum" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_AlisFaturalari_Personel" />
+        <AssociationConnector Association="FirsOtomasyonModel.FK_AlisFaturalari_Stoklar" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

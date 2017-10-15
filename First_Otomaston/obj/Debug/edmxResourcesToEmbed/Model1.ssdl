@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FirsOtomasyonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AktifPasifDurum">
+    <Key>
+      <PropertyRef Name="Durumid" />
+    </Key>
+    <Property Name="Durumid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DurumAdi" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AlisFaturalari">
+    <Key>
+      <PropertyRef Name="AFaturaId" />
+    </Key>
+    <Property Name="AFaturaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cari_id" Type="int" />
+    <Property Name="AlısTarihi" Type="date" />
+    <Property Name="FaturaNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="Adet" Type="int" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="550" />
+    <Property Name="Fiyat" Type="money" />
+    <Property Name="iskonto" Type="money" />
+    <Property Name="Tutar" Type="money" />
+    <Property Name="Stok_id" Type="int" />
+    <Property Name="Personel_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Cariler">
+    <Key>
+      <PropertyRef Name="CariId" />
+    </Key>
+    <Property Name="CariId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CariKod" Type="nchar" MaxLength="20" />
+    <Property Name="CariAdi" Type="nchar" MaxLength="30" />
+    <Property Name="YetkiliAdi" Type="nchar" MaxLength="25" />
+    <Property Name="YetkiliSoyadi" Type="nchar" MaxLength="25" />
+    <Property Name="CariTelNo" Type="nchar" MaxLength="15" />
+    <Property Name="CariTelNo2" Type="nchar" MaxLength="15" />
+    <Property Name="CariAdres" Type="nchar" MaxLength="100" />
+    <Property Name="CariVKN" Type="nchar" MaxLength="11" />
+    <Property Name="Durum_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Departman">
+    <Key>
+      <PropertyRef Name="Departmanid" />
+    </Key>
+    <Property Name="Departmanid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmanAdi" Type="nchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="Personelid" />
+    </Key>
+    <Property Name="Personelid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="nchar" MaxLength="25" />
+    <Property Name="Soyadi" Type="nchar" MaxLength="25" />
+    <Property Name="DogumTarihi" Type="nchar" MaxLength="15" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="300" />
+    <Property Name="DogumYeri" Type="nchar" MaxLength="25" />
+    <Property Name="TcNo" Type="nchar" MaxLength="12" />
+    <Property Name="TelefonNo" Type="nchar" MaxLength="20" />
+    <Property Name="KullaniciAdi" Type="nchar" MaxLength="20" />
+    <Property Name="Password" Type="nchar" MaxLength="10" />
+    <Property Name="Departman_id" Type="int" />
+    <Property Name="Durum_id" Type="int" />
+  </EntityType>
+  <EntityType Name="SiparisDurum">
+    <Key>
+      <PropertyRef Name="DurumId" />
+    </Key>
+    <Property Name="DurumId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DurumAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Siparisler">
+    <Key>
+      <PropertyRef Name="SiparisId" />
+    </Key>
+    <Property Name="SiparisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cari_id" Type="int" />
+    <Property Name="Personel_id" Type="int" />
+    <Property Name="SiparisTarihi" Type="date" />
+    <Property Name="SiparisFiyat" Type="money" />
+    <Property Name="SiparisTutar" Type="money" />
+    <Property Name="SiparisAdet" Type="int" />
+    <Property Name="Stok_id" Type="int" />
+    <Property Name="TeslimTarihi" Type="date" />
+    <Property Name="indirim" Type="money" />
+    <Property Name="Durum_id" Type="int" />
+    <Property Name="SiparisNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StokKategori">
+    <Key>
+      <PropertyRef Name="Kategorid" />
+    </Key>
+    <Property Name="Kategorid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Stoklar">
+    <Key>
+      <PropertyRef Name="Stokid" />
+    </Key>
+    <Property Name="Stokid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StokKodu" Type="nchar" MaxLength="20" />
+    <Property Name="StokAdi" Type="nvarchar" MaxLength="80" />
+    <Property Name="StokBarkod" Type="nchar" MaxLength="20" />
+    <Property Name="Kategori_id" Type="int" />
+    <Property Name="StokResmiYolu" Type="nvarchar" MaxLength="150" />
+    <Property Name="StokAdet" Type="int" />
+    <Property Name="Durum_id" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_AlisFaturalari_Cariler">
+    <End Role="Cariler" Type="Self.Cariler" Multiplicity="0..1" />
+    <End Role="AlisFaturalari" Type="Self.AlisFaturalari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cariler">
+        <PropertyRef Name="CariId" />
+      </Principal>
+      <Dependent Role="AlisFaturalari">
+        <PropertyRef Name="Cari_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlisFaturalari_Personel">
+    <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+    <End Role="AlisFaturalari" Type="Self.AlisFaturalari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="Personelid" />
+      </Principal>
+      <Dependent Role="AlisFaturalari">
+        <PropertyRef Name="Personel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlisFaturalari_Stoklar">
+    <End Role="Stoklar" Type="Self.Stoklar" Multiplicity="0..1" />
+    <End Role="AlisFaturalari" Type="Self.AlisFaturalari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stoklar">
+        <PropertyRef Name="Stokid" />
+      </Principal>
+      <Dependent Role="AlisFaturalari">
+        <PropertyRef Name="Stok_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cariler_AktifPasifDurum">
+    <End Role="AktifPasifDurum" Type="Self.AktifPasifDurum" Multiplicity="0..1" />
+    <End Role="Cariler" Type="Self.Cariler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AktifPasifDurum">
+        <PropertyRef Name="Durumid" />
+      </Principal>
+      <Dependent Role="Cariler">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personel_AktifPasifDurum">
+    <End Role="AktifPasifDurum" Type="Self.AktifPasifDurum" Multiplicity="0..1" />
+    <End Role="Personel" Type="Self.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AktifPasifDurum">
+        <PropertyRef Name="Durumid" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personel_Departman">
+    <End Role="Departman" Type="Self.Departman" Multiplicity="0..1" />
+    <End Role="Personel" Type="Self.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departman">
+        <PropertyRef Name="Departmanid" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="Departman_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Cariler">
+    <End Role="Cariler" Type="Self.Cariler" Multiplicity="0..1" />
+    <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cariler">
+        <PropertyRef Name="CariId" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Cari_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Personel">
+    <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+    <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="Personelid" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Personel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_SiparisDurum">
+    <End Role="SiparisDurum" Type="Self.SiparisDurum" Multiplicity="0..1" />
+    <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SiparisDurum">
+        <PropertyRef Name="DurumId" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Stoklar">
+    <End Role="Stoklar" Type="Self.Stoklar" Multiplicity="0..1" />
+    <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stoklar">
+        <PropertyRef Name="Stokid" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Stok_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stoklar_AktifPasifDurum">
+    <End Role="AktifPasifDurum" Type="Self.AktifPasifDurum" Multiplicity="0..1" />
+    <End Role="Stoklar" Type="Self.Stoklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AktifPasifDurum">
+        <PropertyRef Name="Durumid" />
+      </Principal>
+      <Dependent Role="Stoklar">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stoklar_StokKategori">
+    <End Role="StokKategori" Type="Self.StokKategori" Multiplicity="0..1" />
+    <End Role="Stoklar" Type="Self.Stoklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StokKategori">
+        <PropertyRef Name="Kategorid" />
+      </Principal>
+      <Dependent Role="Stoklar">
+        <PropertyRef Name="Kategori_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FirsOtomasyonModelStoreContainer">
+    <EntitySet Name="AktifPasifDurum" EntityType="Self.AktifPasifDurum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlisFaturalari" EntityType="Self.AlisFaturalari" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cariler" EntityType="Self.Cariler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departman" EntityType="Self.Departman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiparisDurum" EntityType="Self.SiparisDurum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Siparisler" EntityType="Self.Siparisler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StokKategori" EntityType="Self.StokKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stoklar" EntityType="Self.Stoklar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AlisFaturalari_Cariler" Association="Self.FK_AlisFaturalari_Cariler">
+      <End Role="Cariler" EntitySet="Cariler" />
+      <End Role="AlisFaturalari" EntitySet="AlisFaturalari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlisFaturalari_Personel" Association="Self.FK_AlisFaturalari_Personel">
+      <End Role="Personel" EntitySet="Personel" />
+      <End Role="AlisFaturalari" EntitySet="AlisFaturalari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlisFaturalari_Stoklar" Association="Self.FK_AlisFaturalari_Stoklar">
+      <End Role="Stoklar" EntitySet="Stoklar" />
+      <End Role="AlisFaturalari" EntitySet="AlisFaturalari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cariler_AktifPasifDurum" Association="Self.FK_Cariler_AktifPasifDurum">
+      <End Role="AktifPasifDurum" EntitySet="AktifPasifDurum" />
+      <End Role="Cariler" EntitySet="Cariler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personel_AktifPasifDurum" Association="Self.FK_Personel_AktifPasifDurum">
+      <End Role="AktifPasifDurum" EntitySet="AktifPasifDurum" />
+      <End Role="Personel" EntitySet="Personel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personel_Departman" Association="Self.FK_Personel_Departman">
+      <End Role="Departman" EntitySet="Departman" />
+      <End Role="Personel" EntitySet="Personel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Cariler" Association="Self.FK_Siparisler_Cariler">
+      <End Role="Cariler" EntitySet="Cariler" />
+      <End Role="Siparisler" EntitySet="Siparisler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Personel" Association="Self.FK_Siparisler_Personel">
+      <End Role="Personel" EntitySet="Personel" />
+      <End Role="Siparisler" EntitySet="Siparisler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_SiparisDurum" Association="Self.FK_Siparisler_SiparisDurum">
+      <End Role="SiparisDurum" EntitySet="SiparisDurum" />
+      <End Role="Siparisler" EntitySet="Siparisler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Stoklar" Association="Self.FK_Siparisler_Stoklar">
+      <End Role="Stoklar" EntitySet="Stoklar" />
+      <End Role="Siparisler" EntitySet="Siparisler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stoklar_AktifPasifDurum" Association="Self.FK_Stoklar_AktifPasifDurum">
+      <End Role="AktifPasifDurum" EntitySet="AktifPasifDurum" />
+      <End Role="Stoklar" EntitySet="Stoklar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stoklar_StokKategori" Association="Self.FK_Stoklar_StokKategori">
+      <End Role="StokKategori" EntitySet="StokKategori" />
+      <End Role="Stoklar" EntitySet="Stoklar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

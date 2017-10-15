@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FirsOtomasyonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Departman">
+    <Key>
+      <PropertyRef Name="Departmanid" />
+    </Key>
+    <Property Name="Departmanid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmanAdi" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Personels" Relationship="Self.FK_Personel_Departman" FromRole="Departman" ToRole="Personel" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="Personelid" />
+    </Key>
+    <Property Name="Personelid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="Soyadi" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="DogumTarihi" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="DogumYeri" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="TcNo" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="TelefonNo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Departman_id" Type="Int32" />
+    <NavigationProperty Name="Departman" Relationship="Self.FK_Personel_Departman" FromRole="Personel" ToRole="Departman" />
+    <Property Name="Adres" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Siparislers" Relationship="FirsOtomasyonModel.FK_Siparisler_Personel" FromRole="Personel" ToRole="Siparisler" />
+    <Property Name="Durum_id" Type="Int32" />
+    <NavigationProperty Name="AktifPasifDurum" Relationship="FirsOtomasyonModel.FK_Personel_AktifPasifDurum" FromRole="Personel" ToRole="AktifPasifDurum" />
+    <NavigationProperty Name="AlisFaturalaris" Relationship="FirsOtomasyonModel.FK_AlisFaturalari_Personel" FromRole="Personel" ToRole="AlisFaturalari" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Personel_Departman">
+    <End Role="Departman" Type="Self.Departman" Multiplicity="0..1" />
+    <End Role="Personel" Type="Self.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departman">
+        <PropertyRef Name="Departmanid" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="Departman_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FirsOtomasyonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departmen" EntityType="Self.Departman" />
+    <EntitySet Name="Personels" EntityType="Self.Personel" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Personel_Departman" Association="Self.FK_Personel_Departman">
+      <End Role="Departman" EntitySet="Departmen" />
+      <End Role="Personel" EntitySet="Personels" />
+    </AssociationSet>
+    <EntitySet Name="StokKategoris" EntityType="FirsOtomasyonModel.StokKategori" />
+    <EntitySet Name="Stoklars" EntityType="FirsOtomasyonModel.Stoklar" />
+    <AssociationSet Name="FK_Stoklar_StokKategori" Association="FirsOtomasyonModel.FK_Stoklar_StokKategori">
+      <End Role="StokKategori" EntitySet="StokKategoris" />
+      <End Role="Stoklar" EntitySet="Stoklars" />
+    </AssociationSet>
+    <EntitySet Name="Carilers" EntityType="FirsOtomasyonModel.Cariler" />
+    <EntitySet Name="Siparislers" EntityType="FirsOtomasyonModel.Siparisler" />
+    <AssociationSet Name="FK_Siparisler_Cariler" Association="FirsOtomasyonModel.FK_Siparisler_Cariler">
+      <End Role="Cariler" EntitySet="Carilers" />
+      <End Role="Siparisler" EntitySet="Siparislers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Personel" Association="FirsOtomasyonModel.FK_Siparisler_Personel">
+      <End Role="Personel" EntitySet="Personels" />
+      <End Role="Siparisler" EntitySet="Siparislers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Stoklar" Association="FirsOtomasyonModel.FK_Siparisler_Stoklar">
+      <End Role="Stoklar" EntitySet="Stoklars" />
+      <End Role="Siparisler" EntitySet="Siparislers" />
+    </AssociationSet>
+    <EntitySet Name="SiparisDurums" EntityType="FirsOtomasyonModel.SiparisDurum" />
+    <AssociationSet Name="FK_Siparisler_SiparisDurum" Association="FirsOtomasyonModel.FK_Siparisler_SiparisDurum">
+      <End Role="SiparisDurum" EntitySet="SiparisDurums" />
+      <End Role="Siparisler" EntitySet="Siparislers" />
+    </AssociationSet>
+    <EntitySet Name="AlisFaturalaris" EntityType="FirsOtomasyonModel.AlisFaturalari" />
+    <AssociationSet Name="FK_AlisFaturalari_Cariler" Association="FirsOtomasyonModel.FK_AlisFaturalari_Cariler">
+      <End Role="Cariler" EntitySet="Carilers" />
+      <End Role="AlisFaturalari" EntitySet="AlisFaturalaris" />
+    </AssociationSet>
+    <EntitySet Name="AktifPasifDurums" EntityType="FirsOtomasyonModel.AktifPasifDurum" />
+    <AssociationSet Name="FK_Cariler_AktifPasifDurum" Association="FirsOtomasyonModel.FK_Cariler_AktifPasifDurum">
+      <End Role="AktifPasifDurum" EntitySet="AktifPasifDurums" />
+      <End Role="Cariler" EntitySet="Carilers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personel_AktifPasifDurum" Association="FirsOtomasyonModel.FK_Personel_AktifPasifDurum">
+      <End Role="AktifPasifDurum" EntitySet="AktifPasifDurums" />
+      <End Role="Personel" EntitySet="Personels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stoklar_AktifPasifDurum" Association="FirsOtomasyonModel.FK_Stoklar_AktifPasifDurum">
+      <End Role="AktifPasifDurum" EntitySet="AktifPasifDurums" />
+      <End Role="Stoklar" EntitySet="Stoklars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlisFaturalari_Personel" Association="FirsOtomasyonModel.FK_AlisFaturalari_Personel">
+      <End Role="Personel" EntitySet="Personels" />
+      <End Role="AlisFaturalari" EntitySet="AlisFaturalaris" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlisFaturalari_Stoklar" Association="FirsOtomasyonModel.FK_AlisFaturalari_Stoklar">
+      <End Role="Stoklar" EntitySet="Stoklars" />
+      <End Role="AlisFaturalari" EntitySet="AlisFaturalaris" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="StokKategori">
+    <Key>
+      <PropertyRef Name="Kategorid" />
+    </Key>
+    <Property Name="Kategorid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriAdi" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Stoklars" Relationship="FirsOtomasyonModel.FK_Stoklar_StokKategori" FromRole="StokKategori" ToRole="Stoklar" />
+  </EntityType>
+  <EntityType Name="Stoklar">
+    <Key>
+      <PropertyRef Name="Stokid" />
+    </Key>
+    <Property Name="Stokid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StokKodu" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="StokAdi" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="StokBarkod" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Kategori_id" Type="Int32" />
+    <NavigationProperty Name="StokKategori" Relationship="FirsOtomasyonModel.FK_Stoklar_StokKategori" FromRole="Stoklar" ToRole="StokKategori" />
+    <Property Name="StokResmiYolu" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="StokAdet" Type="Int32" />
+    <NavigationProperty Name="Siparislers" Relationship="FirsOtomasyonModel.FK_Siparisler_Stoklar" FromRole="Stoklar" ToRole="Siparisler" />
+    <Property Name="Durum_id" Type="Int32" />
+    <NavigationProperty Name="AktifPasifDurum" Relationship="FirsOtomasyonModel.FK_Stoklar_AktifPasifDurum" FromRole="Stoklar" ToRole="AktifPasifDurum" />
+    <NavigationProperty Name="AlisFaturalaris" Relationship="FirsOtomasyonModel.FK_AlisFaturalari_Stoklar" FromRole="Stoklar" ToRole="AlisFaturalari" />
+  </EntityType>
+  <Association Name="FK_Stoklar_StokKategori">
+    <End Type="FirsOtomasyonModel.StokKategori" Role="StokKategori" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Stoklar" Role="Stoklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StokKategori">
+        <PropertyRef Name="Kategorid" />
+      </Principal>
+      <Dependent Role="Stoklar">
+        <PropertyRef Name="Kategori_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Cariler">
+    <Key>
+      <PropertyRef Name="CariId" />
+    </Key>
+    <Property Name="CariId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CariKod" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="CariAdi" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="YetkiliAdi" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="YetkiliSoyadi" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="CariTelNo" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="CariTelNo2" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="CariAdres" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="CariVKN" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Siparislers" Relationship="FirsOtomasyonModel.FK_Siparisler_Cariler" FromRole="Cariler" ToRole="Siparisler" />
+    <NavigationProperty Name="AlisFaturalaris" Relationship="FirsOtomasyonModel.FK_AlisFaturalari_Cariler" FromRole="Cariler" ToRole="AlisFaturalari" />
+    <Property Name="Durum_id" Type="Int32" />
+    <NavigationProperty Name="AktifPasifDurum" Relationship="FirsOtomasyonModel.FK_Cariler_AktifPasifDurum" FromRole="Cariler" ToRole="AktifPasifDurum" />
+  </EntityType>
+  <EntityType Name="Siparisler">
+    <Key>
+      <PropertyRef Name="SiparisId" />
+    </Key>
+    <Property Name="SiparisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cari_id" Type="Int32" />
+    <Property Name="Personel_id" Type="Int32" />
+    <NavigationProperty Name="Cariler" Relationship="FirsOtomasyonModel.FK_Siparisler_Cariler" FromRole="Siparisler" ToRole="Cariler" />
+    <NavigationProperty Name="Personel" Relationship="FirsOtomasyonModel.FK_Siparisler_Personel" FromRole="Siparisler" ToRole="Personel" />
+    <Property Name="SiparisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SiparisFiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SiparisTutar" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SiparisAdet" Type="Int32" />
+    <Property Name="Stok_id" Type="Int32" />
+    <NavigationProperty Name="Stoklar" Relationship="FirsOtomasyonModel.FK_Siparisler_Stoklar" FromRole="Siparisler" ToRole="Stoklar" />
+    <Property Name="TeslimTarihi" Type="DateTime" Precision="0" />
+    <Property Name="indirim" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Durum_id" Type="Int32" />
+    <NavigationProperty Name="SiparisDurum" Relationship="FirsOtomasyonModel.FK_Siparisler_SiparisDurum" FromRole="Siparisler" ToRole="SiparisDurum" />
+    <Property Name="SiparisNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Siparisler_Cariler">
+    <End Type="FirsOtomasyonModel.Cariler" Role="Cariler" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Siparisler" Role="Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cariler">
+        <PropertyRef Name="CariId" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Cari_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Personel">
+    <End Type="FirsOtomasyonModel.Personel" Role="Personel" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Siparisler" Role="Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="Personelid" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Personel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Stoklar">
+    <End Type="FirsOtomasyonModel.Stoklar" Role="Stoklar" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Siparisler" Role="Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stoklar">
+        <PropertyRef Name="Stokid" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Stok_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SiparisDurum">
+    <Key>
+      <PropertyRef Name="DurumId" />
+    </Key>
+    <Property Name="DurumId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DurumAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Siparislers" Relationship="FirsOtomasyonModel.FK_Siparisler_SiparisDurum" FromRole="SiparisDurum" ToRole="Siparisler" />
+  </EntityType>
+  <Association Name="FK_Siparisler_SiparisDurum">
+    <End Type="FirsOtomasyonModel.SiparisDurum" Role="SiparisDurum" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Siparisler" Role="Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SiparisDurum">
+        <PropertyRef Name="DurumId" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AlisFaturalari">
+    <Key>
+      <PropertyRef Name="AFaturaId" />
+    </Key>
+    <Property Name="AFaturaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cari_id" Type="Int32" />
+    <NavigationProperty Name="Cariler" Relationship="FirsOtomasyonModel.FK_AlisFaturalari_Cariler" FromRole="AlisFaturalari" ToRole="Cariler" />
+    <Property Name="AlısTarihi" Type="DateTime" Precision="0" />
+    <Property Name="FaturaNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Adet" Type="Int32" />
+    <Property Name="Aciklama" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="iskonto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Tutar" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Stok_id" Type="Int32" />
+    <Property Name="Personel_id" Type="Int32" />
+    <NavigationProperty Name="Personel" Relationship="FirsOtomasyonModel.FK_AlisFaturalari_Personel" FromRole="AlisFaturalari" ToRole="Personel" />
+    <NavigationProperty Name="Stoklar" Relationship="FirsOtomasyonModel.FK_AlisFaturalari_Stoklar" FromRole="AlisFaturalari" ToRole="Stoklar" />
+  </EntityType>
+  <Association Name="FK_AlisFaturalari_Cariler">
+    <End Type="FirsOtomasyonModel.Cariler" Role="Cariler" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.AlisFaturalari" Role="AlisFaturalari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cariler">
+        <PropertyRef Name="CariId" />
+      </Principal>
+      <Dependent Role="AlisFaturalari">
+        <PropertyRef Name="Cari_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AktifPasifDurum">
+    <Key>
+      <PropertyRef Name="Durumid" />
+    </Key>
+    <Property Name="Durumid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DurumAdi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Carilers" Relationship="FirsOtomasyonModel.FK_Cariler_AktifPasifDurum" FromRole="AktifPasifDurum" ToRole="Cariler" />
+    <NavigationProperty Name="Personels" Relationship="FirsOtomasyonModel.FK_Personel_AktifPasifDurum" FromRole="AktifPasifDurum" ToRole="Personel" />
+    <NavigationProperty Name="Stoklars" Relationship="FirsOtomasyonModel.FK_Stoklar_AktifPasifDurum" FromRole="AktifPasifDurum" ToRole="Stoklar" />
+  </EntityType>
+  <Association Name="FK_Cariler_AktifPasifDurum">
+    <End Type="FirsOtomasyonModel.AktifPasifDurum" Role="AktifPasifDurum" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Cariler" Role="Cariler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AktifPasifDurum">
+        <PropertyRef Name="Durumid" />
+      </Principal>
+      <Dependent Role="Cariler">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personel_AktifPasifDurum">
+    <End Type="FirsOtomasyonModel.AktifPasifDurum" Role="AktifPasifDurum" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Personel" Role="Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AktifPasifDurum">
+        <PropertyRef Name="Durumid" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stoklar_AktifPasifDurum">
+    <End Type="FirsOtomasyonModel.AktifPasifDurum" Role="AktifPasifDurum" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.Stoklar" Role="Stoklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AktifPasifDurum">
+        <PropertyRef Name="Durumid" />
+      </Principal>
+      <Dependent Role="Stoklar">
+        <PropertyRef Name="Durum_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlisFaturalari_Personel">
+    <End Type="FirsOtomasyonModel.Personel" Role="Personel" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.AlisFaturalari" Role="AlisFaturalari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="Personelid" />
+      </Principal>
+      <Dependent Role="AlisFaturalari">
+        <PropertyRef Name="Personel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlisFaturalari_Stoklar">
+    <End Type="FirsOtomasyonModel.Stoklar" Role="Stoklar" Multiplicity="0..1" />
+    <End Type="FirsOtomasyonModel.AlisFaturalari" Role="AlisFaturalari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stoklar">
+        <PropertyRef Name="Stokid" />
+      </Principal>
+      <Dependent Role="AlisFaturalari">
+        <PropertyRef Name="Stok_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

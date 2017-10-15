@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FirsOtomasyonModelStoreContainer" CdmEntityContainer="FirsOtomasyonEntities">
+    <EntitySetMapping Name="Departmen">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.Departman">
+        <MappingFragment StoreEntitySet="Departman">
+          <ScalarProperty Name="Departmanid" ColumnName="Departmanid" />
+          <ScalarProperty Name="DepartmanAdi" ColumnName="DepartmanAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personels">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.Personel">
+        <MappingFragment StoreEntitySet="Personel">
+          <ScalarProperty Name="Durum_id" ColumnName="Durum_id" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Personelid" ColumnName="Personelid" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="DogumYeri" ColumnName="DogumYeri" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="TelefonNo" ColumnName="TelefonNo" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Departman_id" ColumnName="Departman_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StokKategoris">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.StokKategori">
+        <MappingFragment StoreEntitySet="StokKategori">
+          <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+          <ScalarProperty Name="Kategorid" ColumnName="Kategorid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stoklars">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.Stoklar">
+        <MappingFragment StoreEntitySet="Stoklar">
+          <ScalarProperty Name="Durum_id" ColumnName="Durum_id" />
+          <ScalarProperty Name="StokAdet" ColumnName="StokAdet" />
+          <ScalarProperty Name="StokResmiYolu" ColumnName="StokResmiYolu" />
+          <ScalarProperty Name="Kategori_id" ColumnName="Kategori_id" />
+          <ScalarProperty Name="StokBarkod" ColumnName="StokBarkod" />
+          <ScalarProperty Name="StokAdi" ColumnName="StokAdi" />
+          <ScalarProperty Name="StokKodu" ColumnName="StokKodu" />
+          <ScalarProperty Name="Stokid" ColumnName="Stokid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carilers">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.Cariler">
+        <MappingFragment StoreEntitySet="Cariler">
+          <ScalarProperty Name="Durum_id" ColumnName="Durum_id" />
+          <ScalarProperty Name="CariVKN" ColumnName="CariVKN" />
+          <ScalarProperty Name="CariAdres" ColumnName="CariAdres" />
+          <ScalarProperty Name="CariTelNo2" ColumnName="CariTelNo2" />
+          <ScalarProperty Name="CariTelNo" ColumnName="CariTelNo" />
+          <ScalarProperty Name="YetkiliSoyadi" ColumnName="YetkiliSoyadi" />
+          <ScalarProperty Name="YetkiliAdi" ColumnName="YetkiliAdi" />
+          <ScalarProperty Name="CariAdi" ColumnName="CariAdi" />
+          <ScalarProperty Name="CariKod" ColumnName="CariKod" />
+          <ScalarProperty Name="CariId" ColumnName="CariId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Siparislers">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.Siparisler">
+        <MappingFragment StoreEntitySet="Siparisler">
+          <ScalarProperty Name="SiparisNo" ColumnName="SiparisNo" />
+          <ScalarProperty Name="Durum_id" ColumnName="Durum_id" />
+          <ScalarProperty Name="indirim" ColumnName="indirim" />
+          <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
+          <ScalarProperty Name="Stok_id" ColumnName="Stok_id" />
+          <ScalarProperty Name="SiparisAdet" ColumnName="SiparisAdet" />
+          <ScalarProperty Name="SiparisTutar" ColumnName="SiparisTutar" />
+          <ScalarProperty Name="SiparisFiyat" ColumnName="SiparisFiyat" />
+          <ScalarProperty Name="SiparisTarihi" ColumnName="SiparisTarihi" />
+          <ScalarProperty Name="Personel_id" ColumnName="Personel_id" />
+          <ScalarProperty Name="Cari_id" ColumnName="Cari_id" />
+          <ScalarProperty Name="SiparisId" ColumnName="SiparisId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisDurums">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.SiparisDurum">
+        <MappingFragment StoreEntitySet="SiparisDurum">
+          <ScalarProperty Name="DurumAdi" ColumnName="DurumAdi" />
+          <ScalarProperty Name="DurumId" ColumnName="DurumId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlisFaturalaris">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.AlisFaturalari">
+        <MappingFragment StoreEntitySet="AlisFaturalari">
+          <ScalarProperty Name="Personel_id" ColumnName="Personel_id" />
+          <ScalarProperty Name="Stok_id" ColumnName="Stok_id" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="iskonto" ColumnName="iskonto" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="FaturaNo" ColumnName="FaturaNo" />
+          <ScalarProperty Name="AlısTarihi" ColumnName="AlısTarihi" />
+          <ScalarProperty Name="Cari_id" ColumnName="Cari_id" />
+          <ScalarProperty Name="AFaturaId" ColumnName="AFaturaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AktifPasifDurums">
+      <EntityTypeMapping TypeName="FirsOtomasyonModel.AktifPasifDurum">
+        <MappingFragment StoreEntitySet="AktifPasifDurum">
+          <ScalarProperty Name="DurumAdi" ColumnName="DurumAdi" />
+          <ScalarProperty Name="Durumid" ColumnName="Durumid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
